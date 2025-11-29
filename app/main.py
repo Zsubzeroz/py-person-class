@@ -15,10 +15,10 @@ def create_person_list(people: list) -> list:
     for p in people:
         instance = Person.people[p['name']]
 
-        if p.get('wife'):
+        if p.get('wife') is not None:
             instance.wife = Person.people[p['wife']]
 
-        if p.get('husband'):
+        if p.get('husband') is not None:
             instance.husband = Person.people[p['husband']]
 
     return person_list

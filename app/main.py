@@ -10,7 +10,6 @@ class Person:
 def create_person_list(people: list) -> list:
     Person.people = {}
 
-    # Solução para o Checklist #3: Uso de List Comprehension
     person_list = [Person(p['name'], p['age']) for p in people]
 
     for p in people:
